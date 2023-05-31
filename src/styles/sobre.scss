@@ -1,0 +1,31 @@
+.sobre {
+    padding: 5.6vw;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__item {
+        max-width: 1024px;
+        border-radius: 9px;
+        height: auto;
+        opacity: 0;
+        transform: translate(-50px, 0px);
+        transition: .9s all ease;
+        
+    }
+
+    &__item img {
+        
+    }
+}
+
+.animar {
+    opacity: 1;
+    transform: translate(0);
+}
+
+

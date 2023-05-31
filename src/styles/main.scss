@@ -1,7 +1,12 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: red;
-}
+@use 'variaveis';
+@use 'header';
+@use 'logo';
+@use 'sobre';
 
+
+body {
+    background-image: url(/images/fundo/fundo.jpg);
+
+    overflow-x: hidden;
+    background-size: cover;
+}

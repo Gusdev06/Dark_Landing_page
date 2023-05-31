@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    position: fixed; /* Adicionado */
+    top: 0; /* Posiciona o header no topo da janela */
+    left: 0;
+    right: 0;
+    z-index: 1;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; /* Ocupar toda a largura disponível */
+        max-width: 1200px; /* Defina um valor máximo para evitar que fique muito largo */
+        margin: 0 auto; /* Centralizar horizontalmente */
+        
+    }
+
+    &__logo {
+        font-size: 28px;
+        color: white;
+        font-family: 'Ysabeau', sans-serif;
+        letter-spacing: 20px;
+        margin: 0;
+    }
+
+    &__link {
+        display: inline-block; /* Alterado para inline-block para ficarem na mesma linha */
+        vertical-align: middle; /* Alinhar verticalmente no centro */
+        list-style: none;
+        margin-left: 10px;
+
+        &__nav {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+            font-family: 'Ysabeau', sans-serif;
+            letter-spacing: 2px;
+            flex: 1;
+            text-align: center;
+        }
+
+        &__item {
+            list-style: none;
+            margin-left: 10px;
+
+            &__img {
+                max-width: 35px;
+                margin-left: 80px;
+            }   
+        }
+    }
+}

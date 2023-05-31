@@ -1,0 +1,1 @@
+.sobre{padding:5.6vw;justify-content:center;align-items:center}.sobre__container{display:grid;grid-template-columns:1fr 1fr}.sobre__item{max-width:1024px;border-radius:9px;height:auto;opacity:0;transform:translate(-50px, 0px);transition:.9s all ease}.animar{opacity:1;transform:translate(0)}
