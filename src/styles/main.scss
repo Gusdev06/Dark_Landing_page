@@ -2,11 +2,12 @@
 @use 'header';
 @use 'logo';
 @use 'sobre';
+@use 'personagens';
 
 
 body {
     background-image: url(/images/fundo/fundo.jpg);
-
+    font-family: 'Ysabeau', sans-serif;
     overflow-x: hidden;
     background-size: cover;
 }

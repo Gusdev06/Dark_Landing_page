@@ -21,8 +21,7 @@
 
     &__logo {
         font-size: 28px;
-        color: white;
-        font-family: 'Ysabeau', sans-serif;
+        color: rgb(253, 251, 251);
         letter-spacing: 20px;
         margin: 0;
     }
@@ -34,10 +33,9 @@
         margin-left: 10px;
 
         &__nav {
-            color: white;
+            color: rgb(252, 252, 252);
             text-decoration: none;
             margin-left: 10px;
-            font-family: 'Ysabeau', sans-serif;
             letter-spacing: 2px;
             flex: 1;
             text-align: center;
