@@ -1,3 +1,5 @@
+@use 'variaveis';
+
 .sobre {
     padding: 5.6vw;
     justify-content: center;
@@ -17,7 +19,7 @@
         transition: .9s all ease;
 
         &__text {
-            color: white;
+            color: variaveis.$corPrincipal;
             font-size: 1.5em;
             letter-spacing: 5px;
             // overflow: hidden;

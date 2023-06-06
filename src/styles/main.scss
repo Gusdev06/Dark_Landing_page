@@ -4,10 +4,12 @@
 @use 'sobre';
 @use 'personagens';
 
-
+html {
+  font-family: 'Ysabeau', sans-serif;
+}
 body {
-    background-image: url(/images/fundo/fundo.jpg);
-    font-family: 'Ysabeau', sans-serif;
+    background-image: url(/images/fundo/fundo.jpg); 
     overflow-x: hidden;
     background-size: cover;
+    
 }

@@ -1,3 +1,5 @@
+@use 'variaveis';
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -21,7 +23,7 @@
 
     &__logo {
         font-size: 28px;
-        color: rgb(253, 251, 251);
+        color: variaveis.$corPrincipal;
         letter-spacing: 20px;
         margin: 0;
     }
@@ -33,7 +35,7 @@
         margin-left: 10px;
 
         &__nav {
-            color: rgb(252, 252, 252);
+            color: variaveis.$corPrincipal;
             text-decoration: none;
             margin-left: 10px;
             letter-spacing: 2px;

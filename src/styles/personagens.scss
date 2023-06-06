@@ -1,9 +1,12 @@
+@use 'variaveis';
+
+
 .personagens {
     padding: 2vw 5.6vw;
     
     h1 {
         text-align: center;
-        color: white;
+        color: variaveis.$corPrincipal;
         letter-spacing: 5px;
         text-transform: uppercase;
         margin-bottom: 60px;
@@ -15,15 +18,36 @@
         display: none;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 24px;
-
+        list-style: none;
         &--is-active {
             display: grid;
         }
         &__item {
+            transition: transform 0.5s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+            
+        }
             padding: 0;
             img {
+                
                 max-width: 380px;
                 width: 100%;
+                height: 380px;
+                
+                border-radius: 5px;
+                
+            }
+
+            &__text {
+                color: variaveis.$corPrincipal;
+                font-weight: bold;
+                text-align: center;
+                font-size: 18px;
+                text-transform: uppercase;
+                padding-bottom: 5px;
+                
             }
         }
         
@@ -37,7 +61,7 @@
 
         &__button {
             background: none;
-            color: white;
+            color: variaveis.$corPrincipal;
             border: none;
             font-family: 'Ysabeau', sans-serif;
             font-size: 40px;
@@ -50,14 +74,255 @@
 
             &:hover {
                 transform: scale(1.2);
-                color: #ee000049;
+                color: variaveis.$corSecundaria;
             }
 
             &--is-active {
-                border-bottom: 1px solid white;
-                color: #ee000049;
+                border-bottom: 1px solid variaveis.$corPrincipal;
+                color: variaveis.$corSecundaria;
                 font-size: 90px;
             }
         }
     }
+
+    &__sobre {
+
+
+        &__jonas{
+
+            padding-top: 2vw;
+        
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: variaveis.$corPrincipal;
+
+            &__img {
+                border-radius: 5px;
+            }
+
+
+            &__text {
+                padding: 40px;
+                
+            }
+        }
+
+        }
+
+        &__hanna{
+
+            padding-top: 2vw;
+        
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: variaveis.$corPrincipal;
+
+            &__img {
+                border-radius: 5px;
+            }
+
+
+            &__text {
+                padding: 40px;
+                
+            }
+        }
+
+        }
+
+        &__ulrich{
+
+            padding-top: 2vw;
+        
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: variaveis.$corPrincipal;
+
+            &__img {
+                border-radius: 5px;
+            }
+
+
+            &__text {
+                padding: 40px;
+                
+            }
+        }
+
+        }
+
+        &__magnus{
+
+            padding-top: 2vw;
+        
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: variaveis.$corPrincipal;
+
+            &__img {
+                border-radius: 5px;
+            }
+
+
+            &__text {
+                padding: 40px;
+                
+            }
+        }
+
+        }
+
+        &__francisca{
+
+            padding-top: 2vw;
+        
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: variaveis.$corPrincipal;
+
+            &__img {
+                border-radius: 5px;
+            }
+
+
+            &__text {
+                padding: 40px;
+                
+            }
+        }
+
+        }
+
+        &__mikkel{
+
+            padding-top: 2vw;
+        
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: variaveis.$corPrincipal;
+
+            &__img {
+                border-radius: 5px;
+            }
+
+
+            &__text {
+                padding: 40px;
+                
+            }
+        }
+
+        }
+
+        &__helge{
+
+            padding-top: 2vw;
+        
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: variaveis.$corPrincipal;
+
+            &__img {
+                border-radius: 5px;
+            }
+
+
+            &__text {
+                padding: 40px;
+                
+            }
+        }
+
+        }
+
+        &__Elisabeth{
+
+            padding-top: 2vw;
+        
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: variaveis.$corPrincipal;
+
+            &__img {
+                border-radius: 5px;
+            }
+
+
+            &__text {
+                padding: 40px;
+                
+            }
+        }
+
+        }
+
+        &__claudia{
+
+            padding-top: 2vw;
+        
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: variaveis.$corPrincipal;
+
+            &__img {
+                border-radius: 5px;
+            }
+
+
+            &__text {
+                padding: 40px;
+                
+            }
+        }
+
+        }
+
+        &__elisabeth{
+
+            padding-top: 2vw;
+        
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: variaveis.$corPrincipal;
+
+            &__img {
+                border-radius: 5px;
+            }
+
+
+            &__text {
+                padding: 40px;
+                
+            }
+        }
+
+        }
+
+        
+        
+    }
 }
+
+
+
+

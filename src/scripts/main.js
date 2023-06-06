@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]')
     const text = document.querySelector('.sobre__item__text');
+
+
+
+
     
 
     window.addEventListener('load', function() {
@@ -17,8 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 const abaAlvo  = botao.target.dataset.tabButton;
                 const aba = document.querySelector(`[data-tab-id="${abaAlvo}"]`)
                 escondeAbas()
+                removeBotaoAtivo()
                 aba.classList.add('personagens__list--is-active')
+                botao.target.classList.add('personagens__tabs__button--is-active')
             })
+        }
+
+        
+
+        function removeBotaoAtivo() {
+            for(let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('personagens__tabs__button--is-active')
+            }
         }
 
         function escondeAbas() {
