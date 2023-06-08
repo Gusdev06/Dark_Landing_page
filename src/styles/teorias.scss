@@ -1,0 +1,44 @@
+@use 'variaveis';
+
+.teorias {
+    padding: 5.6vw;
+    
+    &__title {
+        font-size: 3em;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 auto;
+
+        
+        &__item {
+            list-style: none;
+            border-radius: 4px;
+            margin-left: 40px;
+            &__name {
+                color: variaveis.$corPrincipal;
+                font-size: 1.5em;
+                cursor: pointer;
+                background-color: rgba(255, 0, 0, 0.075);
+                border-radius: 3px;
+                white-space: nowrap;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            &__content {
+                display: none;
+                color: white;
+
+                &--is-open {
+                    display: flex;
+                }
+            }
+
+            
+        }
+    }
+}
+

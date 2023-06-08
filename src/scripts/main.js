@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]')
     const text = document.querySelector('.sobre__item__text');
+    const teorias = document.querySelectorAll('.teorias__content__item__name')
+    const resposta = document.querySelectorAll('.teorias__content__item__content')
 
-
-
-
-    
+    Array.from(teorias).forEach(function(abre) {
+        abre.addEventListener('click', function() {
+            resposta.forEach(function(item) {
+                item.classList.add('teorias__content__item__content--is-open')
+            })
+        })
+    })
 
     window.addEventListener('load', function() {
         const logodark = document.querySelector('.logo__dark__item');
@@ -15,17 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     });
 
+    
 
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].addEventListener('click', function (botao) {
-                const abaAlvo  = botao.target.dataset.tabButton;
-                const aba = document.querySelector(`[data-tab-id="${abaAlvo}"]`)
-                escondeAbas()
-                removeBotaoAtivo()
-                aba.classList.add('personagens__list--is-active')
-                botao.target.classList.add('personagens__tabs__button--is-active')
-            })
-        }
+
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function (botao) {
+            const abaAlvo  = botao.target.dataset.tabButton;
+            const aba = document.querySelector(`[data-tab-id="${abaAlvo}"]`)
+            escondeAbas()
+            removeBotaoAtivo()
+            aba.classList.add('personagens__list--is-active')
+            botao.target.classList.add('personagens__tabs__button--is-active')
+
+        })
+    })
 
         
 
@@ -68,6 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
             elemento.innerHTML += letra;
             }, 25 * i);
         });
+
+        
         }
     
         maquinaDeEscrever(text);
@@ -76,3 +86,4 @@ document.addEventListener('DOMContentLoaded', function() {
         // Chama a função reveal() quando a página é rolada
         window.addEventListener('scroll', reveal);
     });
+
