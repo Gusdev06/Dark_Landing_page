@@ -1,16 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]')
     const text = document.querySelector('.sobre__item__text');
-    const teorias = document.querySelectorAll('.teorias__content__item__name')
-    const resposta = document.querySelectorAll('.teorias__content__item__content')
+    const teorias = document.querySelectorAll('[data-faq-question]')
+    const sectionLogo = document.querySelector('.logo__dark')
+    const heightSectionLogo = sectionLogo.clientHeight
+    let position = window.scrollY
 
-    Array.from(teorias).forEach(function(abre) {
-        abre.addEventListener('click', function() {
-            resposta.forEach(function(item) {
-                item.classList.add('teorias__content__item__content--is-open')
-            })
-        })
-    })
+    for(let i = 0; i < teorias.length;  i++) {
+    teorias[i].addEventListener('click', abre_e_fecha_teorias)
+    }
 
     window.addEventListener('load', function() {
         const logodark = document.querySelector('.logo__dark__item');
@@ -18,6 +16,32 @@ document.addEventListener('DOMContentLoaded', function() {
             logodark.style.opacity = 1.7;
             logodark.style.transform = 'scale(1.05)';
         }, 500);
+    });
+
+
+    window.addEventListener("scroll", function() {
+        const currentPosition = window.scrollY
+        const logo = document.querySelector('.header__link__item__img')
+        const headerlogo = document.querySelector('.header__logo')
+        const liheader = document.querySelectorAll('.header__link__nav')
+
+        
+        if (currentPosition < heightSectionLogo) {
+            logo.style.transform = 'rotate(180deg)';
+        } else {
+            logo.style.transform = 'rotate(0deg)'
+        }
+
+
+        if (currentPosition > heightSectionLogo) {
+            headerlogo.style.transform = 'translatex(50px)'
+            headerlogo.style.opacity = '0'
+            headerlogo.style.transition = "all 2s"
+
+        } else {
+            headerlogo.style.opacity = '1'
+        }
+
     });
 
     
@@ -35,7 +59,13 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     })
 
-        
+        function abre_e_fecha_teorias(elemento) {
+            const classe = 'teorias__content__item--is-open'
+            const elementopai = elemento.target.parentNode
+            console.log(elementopai)
+
+            elementopai.classList.toggle(classe)
+        }
 
         function removeBotaoAtivo() {
             for(let i = 0; i < buttons.length; i++) {

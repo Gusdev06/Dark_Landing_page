@@ -8,9 +8,10 @@
     }
 
     &__content {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin: 0 auto;
+        display: block;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr 1fr;
+        // margin: 0 auto;
 
         
         &__item {
@@ -26,17 +27,26 @@
                 white-space: nowrap;
                 margin-bottom: 20px;
                 text-align: center;
+                position: relative;
+
             }
 
             &__content {
-                display: none;
+                height: 0;
+                overflow: hidden; // O overflow ela vai dizer se o conteudo deve ser visivel ou nao mesmo que extrapole o boxmodel
+                padding: 0 24px;
+                transition: height, .10s ease;
                 color: white;
-
-                &--is-open {
-                    display: flex;
-                }
             }
 
+
+            &--is-open {
+            .teorias__content__item__content {
+                height: auto;
+                    padding-bottom: 24px;
+                    transition: height, .10s ease;
+            }
+        }
             
         }
     }

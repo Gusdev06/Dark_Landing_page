@@ -68,7 +68,6 @@
             margin-right: 50px;
             margin-bottom: 60px;
             cursor: pointer;
-            
             padding-bottom: 6px;
             transition: transform 0.2s ease-in-out;
 
@@ -100,6 +99,7 @@
 
             &__img {
                 border-radius: 5px;
+                transform-origin: left;
             }
 
 
@@ -317,11 +317,59 @@
         }
 
         }
-
-        
-        
     }
 }
+
+@media only screen and (max-width: 600px) and (orientation: portrait ) {
+    .personagens {
+        padding: 2vw;
+
+        &__list {
+            grid-template-columns: 1fr;
+            gap:16px;
+
+            &__item {
+                max-width: 100%;
+
+                a {
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                &__text {
+                    font-size: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+
+        &__tabs {
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-bottom: 40px;
+
+            &__button {
+                font-size: 20px;
+                &--is-active {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        &__sobre {
+            &__content {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 40px;
+            }
+        }
+    }
+}
+
 
 
 

@@ -52,3 +52,29 @@
     }
 }
 
+@media (max-width: 600px) {
+    .sobre {
+
+        &__container {
+            grid-template-columns: 1fr;
+        }
+        
+        
+        &__item {
+            max-width: 100%;
+
+            &__text {
+                font-size: 15px;
+                flex-wrap: wrap;
+            }
+        }
+
+
+    }
+
+    span:nth-child(2) {
+        img {
+            display: none;
+        }
+    }
+}

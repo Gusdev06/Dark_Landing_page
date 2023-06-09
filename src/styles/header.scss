@@ -26,6 +26,13 @@
         color: variaveis.$corPrincipal;
         letter-spacing: 20px;
         margin: 0;
+        
+
+        &:hover {
+            transition: 2s;
+            transform: tranlatex(50px);
+            opacity: 0;
+        }
     }
 
     &__link {
@@ -50,7 +57,54 @@
             &__img {
                 max-width: 35px;
                 margin-left: 80px;
+                transition: transform 0.5s;
+
+                &:hover {
+                    animation: rotate-infinite 1s infinite;
+                }
+
+                @keyframes rotate-infinite {
+                    0% {
+                      transform: rotate(0deg); /* Define o início da animação */
+                    }
+                    100% {
+                      transform: rotate(360deg); /* Define o fim da animação */
+                    }
+                }
+                
             }   
         }
     }
 }
+
+@media (max-width: 600px) {
+    .header {
+        height: 80px;
+        font-size: 15px;
+        
+
+        &__container {
+            flex-wrap: wrap;
+            max-width: 600px;    
+            width: 100%;
+        }
+
+        &__logo{
+            font-size: 24px;
+            
+        }
+
+        &__link {
+            display: block;
+            &__item {
+                &__img {
+                    max-width: 25px;
+                    margin-left: 40px;
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+}
+
