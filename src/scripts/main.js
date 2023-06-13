@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         if (currentPosition > heightSectionLogo) {
-            headerlogo.style.transform = 'translatex(50px)'
             headerlogo.style.opacity = '0'
             headerlogo.style.transition = "all 2s"
 

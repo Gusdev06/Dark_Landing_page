@@ -78,3 +78,33 @@
         }
     }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .sobre {
+        &__container {
+            grid-template-columns: 1fr; /* Altera para uma única coluna em telas menores */
+            grid-gap: 10px;
+            padding: 7.4vw;
+            justify-content: center;
+        }
+        
+        &__item {
+            max-width: 100%;
+            transform: none;
+            overflow: hidden;
+
+            &__text {
+                font-size: 1.2em;
+                letter-spacing: 2px;
+                word-wrap: break-word;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .sobre__container > span:nth-child(2) {
+        display: none; /* Oculta a imagem do segundo span em telas menores */
+    }
+}
+
+
